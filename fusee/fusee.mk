@@ -5,11 +5,11 @@ THIS_MAKEFILE     := $(abspath $(lastword $(MAKEFILE_LIST)))
 CURRENT_DIRECTORY := $(abspath $(dir $(THIS_MAKEFILE)))
 include $(CURRENT_DIRECTORY)/../libraries/config/common.mk
 
-all: $(CURRENT_DIRECTORY)/$(ATMOSPHERE_OUT_DIR)/fusee.bin
+all: $(CURRENT_DIRECTORY)/$(ATMOSPHERE_OUT_DIR)/ffusee.bin
 
-$(CURRENT_DIRECTORY)/$(ATMOSPHERE_OUT_DIR)/fusee.bin: $(CURRENT_DIRECTORY)/loader_stub/$(ATMOSPHERE_OUT_DIR)/loader_stub.bin $(CURRENT_DIRECTORY)/$(ATMOSPHERE_OUT_DIR)
-	@cp $(CURRENT_DIRECTORY)/loader_stub/$(ATMOSPHERE_OUT_DIR)/loader_stub.bin $(CURRENT_DIRECTORY)/$(ATMOSPHERE_OUT_DIR)/fusee.bin
-	@echo "Built fusee.bin..."
+$(CURRENT_DIRECTORY)/$(ATMOSPHERE_OUT_DIR)/ffusee.bin: $(CURRENT_DIRECTORY)/loader_stub/$(ATMOSPHERE_OUT_DIR)/loader_stub.bin $(CURRENT_DIRECTORY)/$(ATMOSPHERE_OUT_DIR)
+	@cp $(CURRENT_DIRECTORY)/loader_stub/$(ATMOSPHERE_OUT_DIR)/loader_stub.bin $(CURRENT_DIRECTORY)/$(ATMOSPHERE_OUT_DIR)/ffusee.bin
+	@echo "Built ffusee.bin..."
 
 $(CURRENT_DIRECTORY)/loader_stub/$(ATMOSPHERE_OUT_DIR)/loader_stub.bin: check_loader_stub
 	@$(SILENTCMD)echo "Checked loader stub."

@@ -136,7 +136,7 @@ namespace ams::nxboot {
             const char *n_path = "";
             {
                 IniSectionList sections;
-                if (ParseIniSafe(sections, "sdmc:/emummc/emummc.ini")) {
+                if (ParseIniSafe(sections, "sdmc:/emummc/emummc2.ini")) {
                     for (const auto &section : sections) {
                         /* We only care about the [emummc] section. */
                         if (std::strcmp(section.name, "emummc")) {
